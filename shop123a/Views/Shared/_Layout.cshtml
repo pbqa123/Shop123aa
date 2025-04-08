@@ -1,50 +1,170 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - shop123a</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/shop123a.styles.css" asp-append-version="true" />
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">shop123a</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - shop123a - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+	<title>Electro - HTML Ecommerce Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="~/css/bootstrap.min.css" />
+
+	<!-- Slick -->
+	<link type="text/css" rel="stylesheet" href="~/css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="~/css/slick-theme.css" />
+
+	<!-- nouislider -->
+	<link type="text/css" rel="stylesheet" href="~/css/nouislider.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="~/css/font-awesome.min.css">
+
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="~/css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	@RenderSection("Styles", required: false)
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<!-- MAIN HEADER -->
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3">
+						<div class="header-logo">
+							<a asp-area="" asp-controller="Home" asp-action="Index" class="logo">
+								<img src="./img/Logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<!-- /LOGO -->
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form>
+								<select class="input-select">
+									<option value="0">All</option>
+								</select>
+								<input class="input" placeholder="Search here">
+								<button class="search-btn">Search</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Cart -->
+							@await Component.InvokeAsync("Cart")
+							<!-- /Cart -->
+							<!-- Wishlist -->
+							<div>
+								@{
+									var customerEmail = Context.Session.GetString("CustomerEmail");
+									var customerName = Context.Session.GetString("CustomerName");
+								}
+
+								@if (string.IsNullOrEmpty(customerEmail))
+								{
+									<!-- Hiển thị Login khi chưa đăng nhập -->
+									<a asp-area="" asp-controller="Account" asp-action="Login">
+										<i class="fa fa-heart-o"></i>
+										<span>Login</span>
+									</a>
+								}
+								else
+								{
+									<!-- Hiển thị tên người dùng nếu đã đăng nhập -->
+									<a href="javascript:void(0);" onclick="toggleProfileInfo()">
+										<span>@customerName</span>
+									</a>
+
+									<!-- Ẩn/hiện thông tin người dùng -->
+									<div id="profileInfo" style="display:none;">
+										<p>Email: @customerEmail</p>
+										<a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a>
+									</div>
+								}
+
+								<script>
+									function toggleProfileInfo() {
+										var profileInfo = document.getElementById("profileInfo");
+										// Toggle hiển thị/ẩn thông tin người dùng
+										if (profileInfo.style.display === "none") {
+											profileInfo.style.display = "block";
+										} else {
+											profileInfo.style.display = "none";
+										}
+									}
+								</script>
+
+							</div>							
+							<!-- /Wishlist -->
+							<!-- Menu Toogle -->
+							<!-- /Menu Toogle -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+	<!-- NAVIGATION -->
+	<nav id="navigation">
+		<!-- container -->
+		<div class="container">
+			<!-- responsive-nav -->
+			<div id="responsive-nav">
+				<!-- NAV -->
+				<ul class="main-nav nav navbar-nav">
+					<li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+					<li><a asp-area="" asp-controller="HangHoa" asp-action="Index">Product</a></li>
+					<li><a asp-area="" asp-controller="Cart" asp-action="Index">Cart</a></li>
+				</ul>
+				<!-- /NAV -->
+			</div>
+			<!-- /responsive-nav -->
+		</div>
+		<!-- /container -->
+	</nav>
+	@RenderBody()
+
+	@await Html.PartialAsync("_Footer")
+	<!-- /NAVIGATION -->
+	<!-- jQuery Plugins -->
+
+	<script src="~/js/jquery.min.js"></script>
+	<script src="~/js/bootstrap.min.js"></script>
+	<script src="~/js/slick.min.js"></script>
+	<script src="~/js/nouislider.min.js"></script>
+	<script src="~/js/jquery.zoom.min.js"></script>
+	<script src="~/js/main.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+
 </body>
+
 </html>
+ 
+

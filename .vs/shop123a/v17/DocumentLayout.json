@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\PBQA-PC\\source\\repos\\shop123a\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\pbqa-pc\\source\\repos\\shop123a\\shop123a\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\PBQA-PC\\source\\repos\\shop123a\\shop123a\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "shop123a\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\PBQA-PC\\source\\repos\\shop123a\\shop123a\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "shop123a\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T09:30:40.637Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

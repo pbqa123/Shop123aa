@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using shop123a.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<shop123aContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("shop123aContext") ?? throw new InvalidOperationException("Connection string 'shop123aContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
