@@ -1,0 +1,9 @@
+﻿@model shop123a.ViewModels.CartModel
+
+<div class="dropdown">
+	<a class="dropdown-toggle" asp-area="" asp-controller="Cart" asp-action="Index">
+		<i class="fa fa-shopping-cart"></i>
+		<span>Your Cart</span>
+		<div class="qty">@Model.Quantity</div>
+	</a>
+</div>

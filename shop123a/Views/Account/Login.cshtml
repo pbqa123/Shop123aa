@@ -1,0 +1,117 @@
+﻿@model shop123a.ViewModels.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="new-login-container">
+    <h2>Đăng Nhập</h2>
+    <form asp-action="Login" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="new-form-group">
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" class="form-control" placeholder="Nhập email của bạn" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="new-form-group">
+            <label asp-for="Password">Mật Khẩu</label>
+            <input asp-for="Password" class="form-control" placeholder="Nhập mật khẩu của bạn" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="new-btn-login">Đăng Nhập</button>
+
+        <div class="new-extra-options">
+            <a href="#">Quên mật khẩu?</a>
+            <span>|</span>
+            <a asp-action="Register">Đăng Ký</a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .new-login-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+        .new-login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+    .new-form-group {
+        margin-bottom: 15px;
+    }
+
+        .new-form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .new-form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .new-form-group .text-danger {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+    .new-btn-login {
+        width: 100%;
+        padding: 10px;
+        background: #15161D;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 16px;
+    }
+
+        .new-btn-login:hover {
+            background: #2c2d35;
+        }
+
+    .new-extra-options {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+        .new-extra-options a {
+            color: #15161D;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+            .new-extra-options a:hover {
+                text-decoration: underline;
+            }
+
+        .new-extra-options span {
+            margin: 0 10px;
+            color: #666;
+        }
+
+    .text-danger {
+        color: #dc3545;
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

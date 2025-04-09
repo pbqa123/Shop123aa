@@ -1,12 +1,26 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using shop123a.Data;
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<shop123aContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("shop123aContext") ?? throw new InvalidOperationException("Connection string 'shop123aContext' not found.")));
 
+
+var builder = WebApplication.CreateBuilder(args);
+//g?i chat
+builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Shop123Context>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("HShop"));
+});
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.MaxValue;
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
 
 var app = builder.Build();
 
@@ -18,9 +32,12 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+
+
 app.UseHttpsRedirection();
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapStaticAssets();
