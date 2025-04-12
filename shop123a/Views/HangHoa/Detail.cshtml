@@ -1,84 +1,346 @@
 ﻿@model shop123a.ViewModels.ChiTietHH
 @{
-	ViewData["Title"] = "Detail";
+    ViewData["Title"] = "Detail";
 }
 <!-- SECTION -->
 <div class="section">
-	<!-- container -->
-	<div class="container">
-		<!-- row -->
-		<div class="row">
-			<!-- Product main img -->
-			<div class="col-md-5 col-md-push-2">
-				<div id="product-main-img">
-					<div class="product-preview">
-						<img src="@Model.ImageUrl" alt="@Model.ProductName">
-					</div>
-				</div>
-			</div>
-			<!-- /Product main img -->
-			<!-- Product thumb imgs -->
-			<div class="col-md-2  col-md-pull-5">
-			</div>
-			<!-- /Product thumb imgs -->
-			<!-- Product details -->
-			<div class="col-md-5">
-				<div class="product-details">
-					<h2 class="product-name">@Model.ProductName</h2>
-					<div>
-						<h3 class="product-price">$@Model.Price</h3>
-					</div>
-					<p>@Model.Description</p>
-					<div class="add-to-cart">
-						<div class="qty-label">
-							Qty
-							<div class="input-number">
-								<input type="number" value="1" name="quantity" min="1">
-								<span class="qty-up">+</span>
-								<span class="qty-down">-</span>
-							</div>
-						</div>
-						<form asp-action="AddToCart" asp-controller="Cart" method="post">
-							<input type="hidden" name="ProductId" value="@Model.ProductId" />
-							<input type="hidden" name="quantity" value="1" id="quantity" />
-							<button type="submit" class="add-to-cart-btn">
-								<i class="fa fa-shopping-cart"></i> add to cart
-							</button>
-						</form>
-					</div>
-					<ul class="product-links">
-						<li>Category:</li>
-						<li><a href="#">Accessories</a></li>
-					</ul>
-					<ul class="product-links">
-						<li>Share:</li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-			</div>
-			<!-- /Product details -->
-		</div>
-		<!-- /row -->
-	</div>
-	<!-- /container -->
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- Product main img -->
+            <div class="col-md-5 col-md-push-2">
+                <div id="product-main-img">
+                    <div class="product-preview">
+                        <img src="@Model.ImageUrl" alt="@Model.ProductName">
+                    </div>
+                </div>
+            </div>
+            <!-- /Product main img -->
+            <!-- Product thumb imgs -->
+            <div class="col-md-2 col-md-pull-5">
+            </div>
+            <!-- /Product thumb imgs -->
+            <!-- Product details -->
+            <div class="col-md-5">
+                <div class="product-details">
+                    <div class="product-name-wrapper">
+                        <h2 class="product-name">@Model.ProductName</h2>
+                        <button id="ask-ai-btn" class="ask-ai-btn" data-product-id="@Model.ProductId">
+                            <i class="fa fa-robot"></i> Hỏi AI
+                        </button>
+                    </div>
+                    <div>
+                        <h3 class="product-price">$@Model.Price</h3>
+                    </div>
+                    <p>@Model.Description</p>
+                    <div class="add-to-cart">
+                        <div class="qty-label">
+                            Qty
+                            <div class="input-number">
+                                <input type="number" value="1" name="quantity" min="1">
+                                <span class="qty-up">+</span>
+                                <span class="qty-down">-</span>
+                            </div>
+                        </div>
+                        <form asp-action="AddToCart" asp-controller="Cart" method="post">
+                            <input type="hidden" name="ProductId" value="@Model.ProductId" />
+                            <input type="hidden" name="quantity" value="1" id="quantity" />
+                            <button type="submit" class="add-to-cart-btn">
+                                <i class="fa fa-shopping-cart"></i> add to cart
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="product-links">
+                        <li>Category:</li>
+                        <li><a href="#">Accessories</a></li>
+                    </ul>
+                    <ul class="product-links">
+                        <li>Share:</li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /Product details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+    <!-- AI Chat Box -->
+    <div id="ai-chat-box" class="ai-chat-box">
+        <div class="chat-header">
+            <h4>Chat với AI</h4>
+            <button id="close-chat" class="close-chat-btn">×</button>
+        </div>
+        <div class="chat-body">
+            <p>Xin chào! Tôi có thể giúp gì cho bạn về sản phẩm "@Model.ProductName"?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chat-input" placeholder="Nhập câu hỏi của bạn...">
+            <button id="send-chat" class="send-chat-btn">Gửi</button>
+        </div>
+    </div>
+    <!-- Overlay -->
+    <div id="chat-overlay" class="chat-overlay"></div>
 </div>
 <!-- /SECTION -->
-<script>
-	// Sử dụng JavaScript để cập nhật giá trị quantity khi người dùng thay đổi số lượng
-	document.querySelector('.qty-up').addEventListener('click', function() {
-		var qtyInput = document.querySelector('input[name="quantity"]');
-		qtyInput.value = parseInt(qtyInput.value) + 1;
-		document.getElementById('quantity').value = qtyInput.value;  // Cập nhật giá trị hidden field
-	});
+@section Scripts {
+    <style>
+        /* CSS với khung chat lớn hơn */
+        .ai-chat-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; /* Tăng chiều rộng từ 420px lên 600px */
+            max-height: 700px; /* Tăng chiều cao tối đa từ 520px lên 700px */
+            background: linear-gradient(135deg, #2A3435, #1C2526);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            z-index: 1001;
+            overflow: hidden;
+            transition: transform 0.3s ease, opacity 0.2s ease;
+            opacity: 0;
+        }
 
-	document.querySelector('.qty-down').addEventListener('click', function() {
-		var qtyInput = document.querySelector('input[name="quantity"]');
-		if (qtyInput.value > 1) {
-			qtyInput.value = parseInt(qtyInput.value) - 1;
-			document.getElementById('quantity').value = qtyInput.value;  // Cập nhật giá trị hidden field
-		}
-	});
-</script>
+            .ai-chat-box.show {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.02);
+            }
+
+        .chat-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(28, 37, 38, 0.7);
+            z-index: 1000;
+            backdrop-filter: blur(2px);
+            transition: opacity 0.3s ease;
+        }
+
+        .chat-header {
+            background: linear-gradient(90deg, #C8102E, #E63946);
+            color: #fff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px 15px 0 0;
+        }
+
+            .chat-header h4 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+
+        .close-chat-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0 5px;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+            .close-chat-btn:hover {
+                color: #F1FAEE;
+                transform: rotate(90deg);
+            }
+
+        .chat-body {
+            padding: 20px;
+            max-height: 540px; /* Tăng chiều cao tối đa từ 360px lên 540px */
+            overflow-y: auto;
+            background: #3A4445;
+            border-radius: 0 0 15px 15px;
+        }
+
+            .chat-body p {
+                margin: 0 0 12px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+                .chat-body p:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                }
+
+        .user-message {
+            background: linear-gradient(90deg, #E63946, #C8102E);
+            color: #fff;
+            text-align: right;
+            border: 1px solid #A00D24;
+        }
+
+        .ai-message {
+            background: #4A5455;
+            color: #F1FAEE;
+            border: 1px solid #3A4445;
+        }
+
+        .chat-footer {
+            padding: 15px;
+            border-top: 1px solid #3A4445;
+            display: flex;
+            gap: 12px;
+            background: #2A3435;
+            border-radius: 0 0 15px 15px;
+        }
+
+        #chat-input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #4A5455;
+            border-radius: 8px;
+            outline: none;
+            background: #3A4445;
+            color: #F1FAEE;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            #chat-input:focus {
+                border-color: #E63946;
+                box-shadow: 0 0 8px rgba(230, 57, 70, 0.3);
+            }
+
+        .send-chat-btn {
+            padding: 10px 20px;
+            background: linear-gradient(90deg, #E63946, #C8102E);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .send-chat-btn:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+            }
+
+        .ask-ai-btn {
+            background: linear-gradient(90deg, #E63946, #C8102E);
+            color: #fff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .ask-ai-btn:hover {
+                transform: scale(1.1);
+                box-shadow: 0 4px 12px rgba(230, 57, 70, 0.4);
+            }
+
+        .product-name-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chat-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-body::-webkit-scrollbar-thumb {
+            background: #E63946;
+            border-radius: 4px;
+        }
+
+            .chat-body::-webkit-scrollbar-thumb:hover {
+                background: #C8102E;
+            }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            const askAiBtn = $("#ask-ai-btn");
+            const chatBox = $("#ai-chat-box");
+            const chatOverlay = $("#chat-overlay");
+            const closeChatBtn = $("#close-chat");
+            const sendChatBtn = $("#send-chat");
+            const chatInput = $("#chat-input");
+            const chatBody = $(".chat-body");
+            const productId = askAiBtn.data("product-id");
+
+            // Khi nhấn nút "Hỏi AI"
+            askAiBtn.on("click", function () {
+                chatBox.addClass("show").show();
+                chatOverlay.show();
+                chatBody.empty(); // Xóa nội dung cũ
+
+                // Gửi yêu cầu lấy thông tin sản phẩm ngay lập tức
+                $.ajax({
+                    url: "/Ai/GetChatbotResponse",
+                    type: "POST",
+                    data: { productId: productId },
+                    success: function (data) {
+                        chatBody.append(`<p class="ai-message"><strong>AI:</strong> ${data.reply}</p>`);
+                        chatBody.scrollTop(chatBody[0].scrollHeight); // Cuộn xuống dưới cùng
+                    },
+                    error: function () {
+                        chatBody.append(`<p class="ai-message"><strong>AI:</strong> Có lỗi xảy ra, vui lòng thử lại!</p>`);
+                    }
+                });
+            });
+
+            // Đóng chat box
+            closeChatBtn.on("click", function () {
+                chatBox.removeClass("show").hide();
+                chatOverlay.hide();
+            });
+
+            chatOverlay.on("click", function () {
+                chatBox.removeClass("show").hide();
+                chatOverlay.hide();
+            });
+
+            // Gửi câu hỏi tiếp theo
+            sendChatBtn.on("click", function () {
+                sendMessage();
+            });
+
+            chatInput.on("keypress", function (e) {
+                if (e.which === 13) { // Nhấn Enter
+                    sendMessage();
+                }
+            });
+
+            function sendMessage() {
+                const message = chatInput.val().trim();
+                if (message) {
+                    chatBody.append(`<p class="user-message"><strong>Bạn:</strong> ${message}</p>`);
+                    chatInput.val(""); // Xóa input
+
+                    $.ajax({
+                        url: "/Ai/GetChatbotResponse",
+                        type: "POST",
+                        data: { message: message, productId: productId },
+                        success: function (data) {
+                            chatBody.append(`<p class="ai-message"><strong>AI:</strong> ${data.reply}</p>`);
+                            chatBody.scrollTop(chatBody[0].scrollHeight);
+                        },
+                        error: function () {
+                            chatBody.append(`<p class="ai-message"><strong>AI:</strong> Có lỗi xảy ra, vui lòng thử lại!</p>`);
+                        }
+                    });
+                }
+            }
+        });
+    </script>
+}
