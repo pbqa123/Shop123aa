@@ -1,171 +1,369 @@
-﻿	<!-- FOOTER -->
+﻿<!-- FOOTER -->
 <footer id="footer">
-	<!-- top footer -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">About Us</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut.
-						</p>
-						<ul class="footer-links">
-							<li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-							<li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
-							<li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
-						</ul>
-					</div>
-				</div>
+    <!-- top footer -->
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">About Us</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i>+021-95-51-84</a></li>
+                            <li><a href="#"><i class="fa fa-envelope-o"></i>email@email.com</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Categories</h3>
-						<ul class="footer-links">
-							<li><a href="#">Hot deals</a></li>
-							<li><a href="#">Laptops</a></li>
-							<li><a href="#">Smartphones</a></li>
-							<li><a href="#">Cameras</a></li>
-							<li><a href="#">Accessories</a></li>
-						</ul>
-					</div>
-				</div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Hot deals</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Smartphones</a></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Accessories</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-				<div class="clearfix visible-xs"></div>
+                <div class="clearfix visible-xs"></div>
 
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Information</h3>
-						<ul class="footer-links">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Orders and Returns</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-						</ul>
-					</div>
-				</div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Information</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Orders and Returns</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-				<div class="col-md-3 col-xs-6">
-					<div class="footer">
-						<h3 class="footer-title">Service</h3>
-						<ul class="footer-links">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">View Cart</a></li>
-							<li><a href="#">Wishlist</a></li>
-							<li><a href="#">Track My Order</a></li>
-							<li><a href="#">Help</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /top footer -->
-	<!-- bottom footer -->
-
-
-    <!-- Chat Support Button -->
-    <div class="chat-support">
-        <div class="chat-circle">
-            <i class="fa fa-comments"></i>
-        </div>
-    </div>
-
-    <div class="chat-box" id="chatBox">
-        <div class="chat-header">
-            <span>Customer Support</span>
-            <button id="close-btn">×</button>
-        </div>
-        <div class="chat-body" id="chatBody">
-            <div class="message-container" id="messageContainer">
-                <div class="message message-receiver">Xin chào! Tôi có thể giúp gì cho bạn?</div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="footer">
+                        <h3 class="footer-title">Service</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">View Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Track My Order</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="chat-input">
-            <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." />
-            <button id="send-btn">Gửi</button>
+    </div>
+    <!-- /top footer -->
+    <!-- Chat Support Button -->
+    <div class="chatbot-container">
+        <input type="checkbox" id="chatbot-toggle">
+        <label for="chatbot-toggle" class="chatbot-toggle">💬</label>
+
+        <div class="chatbot-box">
+            <div class="chatbot-header">
+                Chatbot Hỗ Trợ
+                <span class="chatbot-close">✖</span>
+            </div>
+            <div class="chatbot-body" id="chatbot-body">
+                <div class="message bot-message">Xin chào! Tôi có thể giúp gì cho bạn hôm nay?</div>
+            </div>
+            <div class="chatbot-footer">
+                <input type="text" id="chatbot-input" placeholder="Nhập tin nhắn...">
+                <button onclick="sendMessage()">Gửi</button>
+            </div>
         </div>
     </div>
+</footer>
+<!-- /FOOTER -->
+<!-- CSS cho chatbot -->
+<style>
+    .chatbot-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
 
-    <!-- Thêm Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    .chatbot-toggle {
+        background-color: #FF0000;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s ease;
+    }
 
-    <!-- Thêm jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+        }
 
-    <!-- CSS bổ sung -->
-    <style>
-        .chat-box {
-            width: 350px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            font-family: Arial, sans-serif;
+    .chatbot-box {
+        display: none;
+        width: 500px;
+        height: 600px;
+        background-color: #1C2526;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        position: absolute;
+        bottom: 70px;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .chatbot-header {
+        background-color: #FF0000;
+        color: white;
+        padding: 12px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .chatbot-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: color 0.2s ease;
+    }
+
+        .chatbot-close:hover {
+            color: #ddd;
         }
-        .chat-header {
-            background: #007bff;
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .chat-body {
-            max-height: 400px;
-            overflow-y: auto;
-            padding: 10px;
-        }
-        .message {
-            margin: 10px 0;
-            padding: 8px 12px;
-            border-radius: 5px;
-            max-width: 80%;
-        }
-        .message-receiver {
-            background: #f1f1f1;
-            align-self: flex-start;
-        }
-        .message-sender {
-            background: #007bff;
-            color: white;
-            align-self: flex-end;
-        }
-        .chat-input {
-            display: flex;
-            padding: 10px;
-        }
-        #chatInput {
-            flex: 1;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        #send-btn {
-            margin-left: 10px;
-            padding: 5px 15px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .thumbnail {
-            max-width: 100px;
-            max-height: 100px;
+
+    .chatbot-body {
+        padding: 20px;
+        height: 470px;
+        overflow-y: auto;
+        color: white;
+    }
+
+    .message {
+        max-width: 80%;
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        border-radius: 12px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        display: block;
+        font-size: 14px;
+    }
+
+    .bot-message {
+        background-color: #444;
+        color: white;
+        border-radius: 12px 12px 12px 0;
+    }
+
+        .bot-message img {
+            max-width: 100%;
+            max-height: 100px; /* Giảm chiều cao tối đa của hình ảnh */
+            height: auto;
             margin-top: 5px;
             border-radius: 5px;
         }
-    </style>
 
-    <!-- JavaScript -->
-    <script src="~/js/chatbot.js"></script>
-	<script src="~/js/chatbot.js"></script>
+        .bot-message a {
+            color: #FF0000;
+            text-decoration: underline;
+            word-break: break-all;
+        }
 
-</footer>
-<!-- /FOOTER -->
+    .user-message {
+        background-color: #FF0000;
+        color: white;
+        border-radius: 12px 12px 0 12px;
+        margin-left: auto;
+    }
+
+    .chatbot-footer {
+        border-top: 1px solid #FF0000;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background-color: #1C2526;
+    }
+
+        .chatbot-footer input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 14px;
+        }
+
+            .chatbot-footer input:focus {
+                outline: none;
+                background-color: #444;
+            }
+
+        .chatbot-footer button {
+            background-color: #FF0000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            font-size: 14px;
+        }
+
+            .chatbot-footer button:hover {
+                background-color: #e60000;
+            }
+
+    .chatbot-container input[type="checkbox"] {
+        display: none;
+    }
+
+        .chatbot-container input[type="checkbox"]:checked ~ .chatbot-box {
+            display: block;
+        }
+
+    .chatbot-body::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .chatbot-body::-webkit-scrollbar-track {
+        background: #1C2526;
+    }
+
+    .chatbot-body::-webkit-scrollbar-thumb {
+        background: #FF0000;
+        border-radius: 3px;
+    }
+
+        .chatbot-body::-webkit-scrollbar-thumb:hover {
+            background: #e60000;
+        }
+
+    .product-item {
+        margin-top: 10px;
+        padding: 10px;
+        border-top: 1px solid #666;
+        font-size: 14px;
+    }
+
+        .product-item img {
+            max-width: 100%;
+            max-height: 100px; /* Giảm chiều cao tối đa của hình ảnh sản phẩm */
+            height: auto;
+        }
+</style>
+
+<!-- JavaScript để xử lý gửi tin nhắn và hiển thị hình ảnh, link -->
+<script>
+    // Gửi tin nhắn
+    async function sendMessage() {
+        const input = document.getElementById('chatbot-input');
+        const chatBody = document.getElementById('chatbot-body');
+
+        if (input.value.trim() !== '') {
+            // Thêm tin nhắn của người dùng
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user-message';
+            userMessage.textContent = input.value;
+            chatBody.appendChild(userMessage);
+
+            try {
+                // Gửi request tới backend
+                const response = await fetch('/Chatbot/SendMessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ message: input.value })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Thêm phản hồi từ bot với hỗ trợ HTML
+                    const botMessage = document.createElement('div');
+                    botMessage.className = 'message bot-message';
+
+                    // Chuyển đổi định dạng phản hồi từ backend thành HTML
+                    const formattedMessage = formatMessageToHtml(data.message);
+                    botMessage.innerHTML = formattedMessage;
+                    chatBody.appendChild(botMessage);
+                } else {
+                    const errorMessage = document.createElement('div');
+                    errorMessage.className = 'message bot-message';
+                    errorMessage.textContent = data.message;
+                    chatBody.appendChild(errorMessage);
+                }
+            } catch (error) {
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'message bot-message';
+                errorMessage.textContent = 'Lỗi kết nối đến server: ' + error.message;
+                chatBody.appendChild(errorMessage);
+            }
+
+            // Xóa input và cuộn xuống cuối
+            input.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    }
+
+    // Hàm chuyển đổi định dạng phản hồi thành HTML
+    function formatMessageToHtml(message) {
+        if (!message) return '<p>Không có phản hồi từ bot.</p>';
+
+        // Nếu message là một object (JSON từ backend)
+        if (typeof message === 'object' && message.text) {
+            let htmlContent = `<p>${message.text}</p>`;
+
+            // Nếu có danh sách sản phẩm
+            if (message.products && message.products.length > 0) {
+                htmlContent += '<div class="product-list">';
+                message.products.forEach(product => {
+                    htmlContent += `
+                        <div class="product-item">
+                            <p><strong>${product.name}</strong> (Độ khớp: ${product.matchScore}%)</p>
+                            <p>Giá: ${product.price}</p>
+                            <p>${product.description}</p>
+                            ${product.quantity > 0 ? `<p>Còn: ${product.quantity} sản phẩm</p>` : '<p>Hết hàng</p>'}
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                            <p><a href="${product.productUrl}" target="_blank">Xem sản phẩm</a></p>
+                        </div>`;
+                });
+                htmlContent += '</div>';
+            }
+
+            return htmlContent;
+        }
+
+        // Nếu message là chuỗi đơn giản (ví dụ từ OpenAI)
+        return `<p>${message}</p>`;
+    }
+
+    // Xử lý sự kiện nhấn Enter
+    document.getElementById('chatbot-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+
+    // Đóng khung chat khi nhấp vào nút X
+    document.querySelector('.chatbot-close').addEventListener('click', function () {
+        document.getElementById('chatbot-toggle').checked = false;
+    });
+</script>

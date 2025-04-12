@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using shop123a.Data;
 
-
 var builder = WebApplication.CreateBuilder(args);
 //g?i chat
 builder.Services.AddHttpClient();

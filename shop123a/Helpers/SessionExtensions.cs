@@ -1,4 +1,6 @@
-﻿namespace shop123a.Helpers
+﻿using System.Text.Json;
+
+namespace shop123a.Helpers
 {
     public static class SessionExtensions
     {

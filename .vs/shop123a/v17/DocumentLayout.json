@@ -1,50 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\",
+  "WorkspaceRootPath": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\views\\admin\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\pbqa-pc\\source\\repos\\shop123aa\\shop123a\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\aicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\pbqa-pc\\source\\repos\\shop123aa\\shop123a\\controllers\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\chatbotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\controllers\\loginusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\controllers\\loginusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\views\\shared\\components\\menucategory\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\views\\shared\\components\\menucategory\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\views\\shared\\components\\cart\\cartpanel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\views\\shared\\components\\cart\\cartpanel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\viewcomponents\\menucategoryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\viewcomponents\\menucategoryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\viewcomponents\\cartviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\pbqa-pc\\source\\repos\\shop123aa\\shop123a\\viewcomponents\\cartviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\viewcomponents\\cartviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|c:\\users\\dell\\source\\repos\\shop123aa\\shop123a\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C00DF46-DF4D-4CAD-B17D-901F25D23CFE}|shop123a\\shop123a.csproj|solutionrelative:shop123a\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,145 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "shop123a\\Views\\Admin\\AdminDashboard.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Admin\\AdminDashboard.cshtml",
-              "RelativeToolTip": "shop123a\\Views\\Admin\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:15:20.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "shop123a\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "shop123a\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Title": "ChatbotController.cs",
+              "DocumentMoniker": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\Controllers\\ChatbotController.cs",
+              "RelativeDocumentMoniker": "shop123a\\Controllers\\ChatbotController.cs",
+              "ToolTip": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\Controllers\\ChatbotController.cs",
+              "RelativeToolTip": "shop123a\\Controllers\\ChatbotController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:14:07.758Z",
+              "WhenOpened": "2025-04-12T15:44:19.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginUserController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\LoginUserController.cs",
-              "RelativeDocumentMoniker": "shop123a\\Controllers\\LoginUserController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\LoginUserController.cs",
-              "RelativeToolTip": "shop123a\\Controllers\\LoginUserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAASAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "AiController.cs",
+              "DocumentMoniker": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AiController.cs",
+              "RelativeDocumentMoniker": "shop123a\\Controllers\\AiController.cs",
+              "ToolTip": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AiController.cs",
+              "RelativeToolTip": "shop123a\\Controllers\\AiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:13:11.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "shop123a\\Views\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "shop123a\\Views\\Account\\Register.cshtml",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAqwIoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:11:27.926Z",
+              "WhenOpened": "2025-04-12T15:44:06.61Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "shop123a\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "shop123a\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:08:02.205Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "shop123a\\Views\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "shop123a\\Views\\Account\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:04:39.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Shared\\Components\\MenuCategory\\Default.cshtml",
-              "RelativeDocumentMoniker": "shop123a\\Views\\Shared\\Components\\MenuCategory\\Default.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Shared\\Components\\MenuCategory\\Default.cshtml",
-              "RelativeToolTip": "shop123a\\Views\\Shared\\Components\\MenuCategory\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:03:16.308Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CartPanel.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Shared\\Components\\Cart\\CartPanel.cshtml",
-              "RelativeDocumentMoniker": "shop123a\\Views\\Shared\\Components\\Cart\\CartPanel.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Views\\Shared\\Components\\Cart\\CartPanel.cshtml",
-              "RelativeToolTip": "shop123a\\Views\\Shared\\Components\\Cart\\CartPanel.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-09T07:02:21.549Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MenuCategoryViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\MenuCategoryViewComponent.cs",
-              "RelativeDocumentMoniker": "shop123a\\ViewComponents\\MenuCategoryViewComponent.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\MenuCategoryViewComponent.cs",
-              "RelativeToolTip": "shop123a\\ViewComponents\\MenuCategoryViewComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:01:16.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "CartViewComponent.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\CartViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\CartViewComponent.cs",
               "RelativeDocumentMoniker": "shop123a\\ViewComponents\\CartViewComponent.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\CartViewComponent.cs",
+              "ToolTip": "C:\\Users\\PBQA-PC\\source\\repos\\Shop123aa\\shop123a\\ViewComponents\\CartViewComponent.cs",
               "RelativeToolTip": "shop123a\\ViewComponents\\CartViewComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T07:00:09.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Program.cs",
-              "RelativeDocumentMoniker": "shop123a\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\Shop123aa\\shop123a\\Program.cs",
-              "RelativeToolTip": "shop123a\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T06:58:12.031Z",
+              "WhenOpened": "2025-04-12T15:44:01.694Z",
               "EditorCaption": ""
             }
           ]
